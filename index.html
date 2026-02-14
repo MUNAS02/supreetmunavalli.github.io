@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Supreet Munavalli | Data Engineer</title>
-  <meta name="description" content="Portfolio of Supreet Munavalli — Data Engineer (Azure, Databricks, GMP analytics, ETL)." />
+  <meta name="description" content="Portfolio of Supreet Munavalli — Data Engineer (Azure, Databricks, Fabric, ETL, cGMP data structuring, LLM pipelines)." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -13,7 +13,9 @@
       <a class="brand" href="#top">Supreet Munavalli</a>
       <nav class="links">
         <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
         <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -21,165 +23,280 @@
   </header>
 
   <main id="top">
+    <!-- HERO -->
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <p class="pill">Data Engineer • Azure • Databricks • GMP Analytics</p>
-          <h1>Building reliable data systems and analytics for biotech, pharma, and supply chain.</h1>
+          <p class="pill">Data Engineer • Azure • Databricks • Microsoft Fabric • ETL</p>
+          <h1>Hi, I’m Supreet — I build reliable data pipelines and analytics-ready datasets.</h1>
           <p class="sub">
-            I design metadata-driven ETL pipelines, data-quality checks, and structured datasets
-            for decision-making and compliance (ALCOA+ / cGMP).
+            I have experience across biotech + pharma data extraction/normalization (LLMs), and enterprise-grade
+            data engineering on Azure (ADF, Databricks, Synapse, Fabric), including CI/CD and monitoring.
           </p>
+
           <div class="cta">
             <a class="btn" href="#projects">View Projects</a>
             <a class="btn secondary" href="#contact">Contact Me</a>
           </div>
+
           <div class="quick-links">
             <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a>
             <span>•</span>
             <a href="https://github.com/YOUR-GITHUB" target="_blank" rel="noreferrer">GitHub</a>
             <span>•</span>
-            <a href="#resume">Resume</a>
+            <a href="https://leetcode.com/YOUR-LEETCODE" target="_blank" rel="noreferrer">LeetCode</a>
           </div>
         </div>
 
         <div class="card">
-          <h2>Highlights</h2>
+          <h2>Quick Info</h2>
           <ul class="bullets">
-            <li>Azure Data Factory + Databricks ETL pipelines</li>
-            <li>GMP-style data structuring + traceability fields</li>
-            <li>LLM + dictionary-guided normalization workflows</li>
-            <li>Supply chain / procurement analytics dashboards</li>
+            <li><b>Location:</b> Houston, TX</li>
+            <li><b>Email:</b> <a href="mailto:suprmu96@gmail.com">suprmu96@gmail.com</a></li>
+            <li><b>Phone:</b> <a href="tel:+16177855054">+1 (617) 785-5054</a></li>
+            <li><b>Focus:</b> Azure ETL, data quality, monitoring, LLM extraction/normalization</li>
           </ul>
         </div>
       </div>
     </section>
 
+    <!-- PROJECTS -->
     <section id="projects" class="section">
       <div class="container">
         <div class="section-head">
           <h2>Projects</h2>
-          <p>Portfolio-ready work focused on data engineering, quality, and real-world outcomes.</p>
+          <p>Selected work aligned to my resume projects and data engineering experience.</p>
         </div>
 
         <div class="grid">
           <article class="project">
-            <h3>GMP Digital Batch Record Structuring</h3>
+            <h3>Product Sales Analysis (Data Warehouse + SCD Type 2)</h3>
             <p>
-              Structured raw manufacturing data into a clean schema with data-quality metrics and
-              traceability-ready fields.
+              Built a warehouse with 6 dimension tables + 1 fact table (~50,000 transactions) for pharma product sales
+              across 3 U.S. locations (FY2019). Implemented SCD Type 2 on employee dimension and incremental loads to
+              resolve discrepancies (20% revenue adjustment recovery).
             </p>
             <div class="tags">
-              <span>Python</span><span>Pandas</span><span>Data Quality</span><span>cGMP</span>
+              <span>Talend</span><span>PostgreSQL</span><span>Excel</span><span>Data Warehouse</span><span>SCD Type 2</span>
             </div>
             <div class="actions">
-              <a class="link" href="https://github.com/YOUR-GITHUB/PROJECT-1" target="_blank" rel="noreferrer">GitHub</a>
-              <a class="link" href="https://YOUR-DEMO-LINK" target="_blank" rel="noreferrer">Demo</a>
+              <a class="link" href="https://github.com/YOUR-GITHUB/product-sales-analysis" target="_blank" rel="noreferrer">GitHub</a>
             </div>
           </article>
 
           <article class="project">
-            <h3>LLM Biotech Normalization Engine</h3>
+            <h3>Pharmaceutical Inventory Management System (Oracle 19c)</h3>
             <p>
-              Hybrid system using dictionaries + prompt rules to standardize messy biotech text into
-              canonical values (tags, buffers, antibiotics, chromatography).
+              Designed an inventory management database (14 tables) and implemented procedures, functions, triggers,
+              and views for transaction handling and row-level security enforcing 12 business rules.
             </p>
             <div class="tags">
-              <span>LLMs</span><span>Prompting</span><span>JSON</span><span>Normalization</span>
+              <span>Oracle 19c</span><span>PL/SQL</span><span>Procedures</span><span>Triggers</span><span>Views</span>
             </div>
             <div class="actions">
-              <a class="link" href="https://github.com/YOUR-GITHUB/PROJECT-2" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="link" href="https://github.com/YOUR-GITHUB/pharma-inventory-system" target="_blank" rel="noreferrer">GitHub</a>
             </div>
           </article>
 
           <article class="project">
-            <h3>Supply Chain Spend Analytics</h3>
+            <h3>LLM-Based Research Paper Data Extraction (Biotech)</h3>
             <p>
-              Spend breakdown, supplier performance metrics, and exception reporting for procurement process improvement.
+              Extracted structured data from 600 research papers across 20 proteins using Llama 3.2 via prompt engineering.
+              Validated and transformed data for 157 papers (85% accuracy on 8B model). Built 600+ key-value dictionaries
+              and fine-tuned Phi-4 mini to reach ~95% accuracy for transformation tasks.
             </p>
             <div class="tags">
-              <span>SQL</span><span>Power BI/Tableau</span><span>KPIs</span>
+              <span>Python</span><span>LLMs</span><span>Prompt Engineering</span><span>Fine-tuning</span><span>Data Validation</span>
             </div>
             <div class="actions">
-              <a class="link" href="https://github.com/YOUR-GITHUB/PROJECT-3" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="link" href="https://github.com/YOUR-GITHUB/llm-paper-extraction" target="_blank" rel="noreferrer">GitHub</a>
             </div>
           </article>
 
           <article class="project">
-            <h3>Azure Medallion ETL Pipeline</h3>
+            <h3>Azure Medallion Pipeline + CI/CD + Alerts</h3>
             <p>
-              Bronze → Silver → Gold pipeline with parameterized ingestion and logging for reproducible processing.
+              Implemented metadata-driven incremental pipelines (Bronze → Silver Delta tables) and migrated logic from
+              stored procedures to PySpark. Built CI/CD for ADF/Databricks and automated failure notifications for 20+ ADF pipelines.
             </p>
             <div class="tags">
-              <span>Azure</span><span>ADF</span><span>Databricks</span><span>ETL</span>
+              <span>Azure Data Factory</span><span>Databricks</span><span>PySpark</span><span>Synapse</span><span>Microsoft Fabric</span>
             </div>
             <div class="actions">
-              <a class="link" href="https://github.com/YOUR-GITHUB/PROJECT-4" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="link" href="https://github.com/YOUR-GITHUB/azure-medallion-pipeline" target="_blank" rel="noreferrer">GitHub</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="section alt">
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section alt">
       <div class="container">
         <div class="section-head">
-          <h2>Skills</h2>
-          <p>Tools and technologies I use to build production-ready data solutions.</p>
+          <h2>Experience</h2>
+          <p>Roles and impact (from my resume).</p>
         </div>
 
         <div class="grid two">
           <div class="card">
-            <h3>Data Engineering</h3>
+            <h3>PredictaBio Innovations — Data Engineer</h3>
+            <p class="muted">Houston, TX • Aug 2025 – Present</p>
             <ul class="bullets">
-              <li>Python, SQL, Pandas</li>
-              <li>ETL/ELT, data modeling, pipeline orchestration</li>
-              <li>Data quality checks, validation rules</li>
+              <li>Extracted data from 600 research papers using Llama 3.2 for 20 proteins via prompt engineering.</li>
+              <li>Transformed + validated data for 157 papers, achieving ~85% accuracy on Llama 3.2 8B.</li>
+              <li>Created 600+ key-value dictionaries; fine-tuned Phi-4 mini to ~95% accuracy for transformation.</li>
             </ul>
           </div>
+
           <div class="card">
-            <h3>Cloud & Analytics</h3>
+            <h3>Deloitte Touche Tohmatsu — Data Engineer</h3>
+            <p class="muted">Pune, India • Jan 2022 – Jan 2023</p>
             <ul class="bullets">
-              <li>Azure Data Factory, Databricks, Fabric (as applicable)</li>
-              <li>Power BI / Tableau (as applicable)</li>
-              <li>Excel, basic statistics / JMP (if relevant)</li>
+              <li>Wrote 20+ complex SQL queries to transform data into Silver Delta tables from Bronze.</li>
+              <li>Converted 10 stored procedures (T-SQL → PySpark) for incremental loading (Synapse → Fabric).</li>
+              <li>Built metadata-driven Fabric pipelines (medallion architecture) for incremental external loads.</li>
+              <li>Implemented CI/CD for Databricks + ADF using Azure DevOps; reduced deployment time by ~40%.</li>
+              <li>Designed failure notification system for 20+ ADF pipelines (Teams + email alerts).</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Accenture — Data Engineer</h3>
+            <p class="muted">Bengaluru, India • Jun 2018 – Nov 2021</p>
+            <ul class="bullets">
+              <li>Managed pipelines supporting analytics platform used by 5,000+ users across 36 countries.</li>
+              <li>Improved ETL performance by ~50% via SQL optimization, indexing, log cleanup, stats gathering.</li>
+              <li>Resolved 150+ data quality incidents using RCA + reconciliation scripts + validation checks.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>What I’m strongest at</h3>
+            <ul class="bullets">
+              <li>Building incremental ETL pipelines (batch + structured transformations)</li>
+              <li>Monitoring, alerting, and reliability for production pipelines</li>
+              <li>Structured extraction/normalization (LLM + dictionaries)</li>
+              <li>Clean data modeling for analytics and reporting</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Technical Skills</h2>
+          <p>Tools and technologies from my resume.</p>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <h3>Languages</h3>
+            <ul class="bullets">
+              <li>SQL, Python, PL/SQL, T-SQL</li>
+              <li>PySpark, Spark SQL, Unix</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Databases</h3>
+            <ul class="bullets">
+              <li>Oracle (11g/12c/19c), SQL Server, PostgreSQL</li>
+              <li>Azure SQL DB, Azure Synapse</li>
+              <li>MongoDB, Snowflake</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Cloud & Data Engineering</h3>
+            <ul class="bullets">
+              <li>Azure Data Factory, Azure Databricks, Microsoft Fabric, ADLS Gen2</li>
+              <li>Azure DevOps (CI/CD)</li>
+              <li>AWS: S3, EC2, Glue, Lambda, Step Functions</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Tools & Practices</h3>
+            <ul class="bullets">
+              <li>Informatica PowerCenter, Talend, StreamSets, Autosys, UC4</li>
+              <li>Confluence, JIRA, HP Service Centre, Remedy</li>
+              <li>ETL testing, data validation, monitoring/alerts</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Education</h2>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <h3>Northeastern University</h3>
+            <p class="muted">Boston, MA • Jan 2023 – May 2025</p>
+            <ul class="bullets">
+              <li>Master of Science in Data Analytics • GPA: 3.82</li>
+              <li>Courses: Database Management & Design, Data Warehousing & BI, Generative AI</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>BVB College of Engineering & Technology</h3>
+            <p class="muted">Karnataka, India • Aug 2014 – May 2018</p>
+            <ul class="bullets">
+              <li>Bachelor of Engineering in Electronics & Communication</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME -->
     <section id="resume" class="section">
       <div class="container">
         <div class="section-head">
           <h2>Resume</h2>
-          <p>Download my resume or view it on LinkedIn.</p>
+          <p>Download my resume PDF.</p>
         </div>
+
         <div class="card row">
           <div>
             <h3>Supreet Munavalli</h3>
-            <p class="muted">Data Engineer • Azure • Databricks • GMP Analytics</p>
+            <p class="muted">Data Engineer • Azure • Databricks • Microsoft Fabric</p>
           </div>
           <div class="row-actions">
             <a class="btn" href="resume.pdf" target="_blank" rel="noreferrer">Download PDF</a>
             <a class="btn secondary" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
         </div>
-        <p class="note">Tip: upload your resume as <code>resume.pdf</code> in the same repo.</p>
+
+        <p class="note">Upload your resume into this repo as <code>resume.pdf</code> so the button works.</p>
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="section alt">
       <div class="container">
         <div class="section-head">
           <h2>Contact</h2>
           <p>Best way to reach me:</p>
         </div>
+
         <div class="card">
           <ul class="bullets">
-            <li>Email: <a href="mailto:YOUR_EMAIL">YOUR_EMAIL</a></li>
+            <li>Email: <a href="mailto:suprmu96@gmail.com">suprmu96@gmail.com</a></li>
+            <li>Phone: <a href="tel:+16177855054">+1 (617) 785-5054</a></li>
             <li>LinkedIn: <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noreferrer">linkedin.com/in/YOUR-LINKEDIN</a></li>
             <li>GitHub: <a href="https://github.com/YOUR-GITHUB" target="_blank" rel="noreferrer">github.com/YOUR-GITHUB</a></li>
+            <li>LeetCode: <a href="https://leetcode.com/YOUR-LEETCODE" target="_blank" rel="noreferrer">leetcode.com/YOUR-LEETCODE</a></li>
           </ul>
         </div>
       </div>
